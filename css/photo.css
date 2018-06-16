@@ -1,0 +1,47 @@
+﻿
+.mySlides 
+{
+    display:none;
+    font-family:ＭＳ ゴシック;
+}
+
+.photocontroller
+{
+    background-color: #DDD; 
+    border: none;
+    color: Black;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition:.1s;
+    margin-left:30px;
+    margin-right:30px;
+    cursor:pointer;
+}
+.photocontroller:hover
+{
+    background-color: #555;
+    color:White;
+}
+
+.photonumber
+{
+    background-color: White; 
+    border: none;
+    color: Black;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition:.1s;
+    cursor:pointer;
+}
+.photonumber:hover
+{
+    
+}
+    
+button:focus {outline:0;}

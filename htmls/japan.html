@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+
+<html>
+<head>
+    <title>My Life in Japan</title>
+    <link rel="Stylesheet" type="text/css" href="../css/index.css">
+
+    <link rel="Stylesheet" type="text/css" href="../css/japan.css">
+    <script type="text/javascript" src=../script/index.js></script>
+    <script type="text/javascript" src=../script/photo.js></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>        
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                showImages('.scrollHeader',145 );
+            });
+        });
+
+    </script>    
+</head>
+<body onload="animateForeground(),showDivs(1),loadMenuButton(),openTab('jpsightseeing', 'jpsightseeingLink',1),slideIn(['#jpsightseeing','#jpfoodLink1','#jpsightseeingLink1'],['#pagetop','#footer','#jpfoodLink2','#jpsightseeingLink2'])">
+
+<script type="text/javascript">  </script>
+
+<div style="padding-top:220px;">
+    <button class="jplink" id="jpsightseeingLink1" onclick="openTab('jpsightseeing','jpsightseeingLink',0 )">日本旅行</button>
+    <button class="jplink" id="jpfoodLink1" onclick="openTab('jpfood','jpfoodLink',0 )">日本料理</button>
+</div>
+
+
+<div style="background-color:White;display:none;" id="jpsightseeing" class="jpcontent" align=center>
+   <div style="padding:0.5cm;"></div>
+   <h2>日本旅行</h2>
+   <div style="padding:0.5cm;"></div>
+
+   <style>
+        
+   </style>
+   <table>
+    <tr>
+        <th style="width:10cm;align:center;padding-top:1.3cm;">
+
+         <img src="../img/japan/sightseeing/japan-map.gif" width=100% /> 
+
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon1 onclick="currentDiv(1)"> 
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon2 onclick="currentDiv(2)"> 
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon3 onclick="currentDiv(3)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon4 onclick="currentDiv(4)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon5 onclick="currentDiv(5)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon6 onclick="currentDiv(6)"> 
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon7 onclick="currentDiv(7)"> 
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon8 onclick="currentDiv(8)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon9 onclick="currentDiv(9)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon10 onclick="currentDiv(10)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon11 onclick="currentDiv(11)"> 
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon12 onclick="currentDiv(12)"> 
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon13 onclick="currentDiv(13)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon14 onclick="currentDiv(14)">
+         <img src="../img/japan/sightseeing/icon.png" width="4%" class="photonumber" id=icon15 onclick="currentDiv(15)">
+
+        </th>
+        <th style="width:1.5cm;"></th>
+        <th style="width:14cm;background-color:#777;align:center;">
+            <div id="sight_bg">
+            
+            <div id="hokkaido" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/01hokkaido.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    登別<br />
+                    所在地：北海道<br />
+                    </div>
+                </div>
+                
+            </div>
+            <div id="tokyo" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/02tokyo.jpg'/>
+                 <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    六本木ヒルス<br />
+                    所在地：東京都<br />
+                    </div>
+                </div>               
+            </div>
+            <div id="kanagawa" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/03kanagawa.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    高徳院<br />
+                    所在地：神奈川県<br />
+                    </div>
+                </div>                 
+            </div>
+            <div id="yamanashi" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/04yamanashi.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    河口湖<br />
+                    所在地：山梨県<br />
+                    </div>
+                </div>                   
+            </div>
+            <div id="gifu" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/05gifu.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    白川郷<br />
+                    所在地：岐阜県<br />
+                    </div>
+                </div>                   
+            </div>
+
+            <div id="kyoto" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/06kyoto.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    清水寺<br />
+                    所在地：京都府<br />
+                    </div>
+                </div>
+                
+            </div>
+            <div id="mie" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/07mie.jpg'/>
+                 <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    伊勢神宮<br />
+                    所在地：三重県<br />
+                    </div>
+                </div>               
+            </div>
+            <div id="osaka" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/08osaka.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    ユニバーサルスタジオジャパン<br />
+                    所在地：大阪府<br />
+                    </div>
+                </div>                 
+            </div>
+            <div id="hyogo" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/09hyogo.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    姫路城<br />
+                    所在地：兵庫県<br />
+                    </div>
+                </div>                   
+            </div>
+            <div id="tottori" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/10tottori.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    鳥取砂丘<br />
+                    所在地：鳥取県<br />
+                    </div>
+                </div>                   
+            </div>
+
+            <div id="hiroshima" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/11hiroshima.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    宮島<br />
+                    所在地：広島県<br />
+                    </div>
+                </div>
+                
+            </div>
+            <div id="fukuoka" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/12fukuoka.jpg'/>
+                 <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    大宰府天満宮<br />
+                    所在地：福岡県<br />
+                    </div>
+                </div>               
+            </div>
+            <div id="saga" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/13saga.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    祐徳稲荷神社<br />
+                    所在地：佐賀県<br />
+                    </div>
+                </div>                 
+            </div>
+            <div id="nagasaki" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/14nagasaki.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    軍艦島<br />
+                    所在地：長崎県<br />
+                    </div>
+                </div>                   
+            </div>
+            <div id="kumamoto" class="mySlides">
+                <img src='../img/japan/sightseeing/slides/15kumamoto.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    熊本城<br />
+                    所在地：熊本県<br />
+                    </div>
+                </div>                   
+            </div>
+
+            </div>
+
+            <div align=center>
+                <table style="padding-top:10cm;padding-bottom:20px;">
+                <tr>
+                   <th><button class="photocontroller" onclick="plusDivs(-1)">❮ 前へ</button> </th>
+                   <th><button class="photocontroller" onclick="plusDivs(1)">次へ ❯</button> </th>
+                </tr>
+                </table>
+            </div>
+        </th>
+    </tr>
+   </table> 
+                
+      
+   <div style="padding:0.5cm;"></div>
+</div>
+
+<div id="jpfood" class="jpcontent" style="background-color:White;" align=center>
+    <div style="padding:0.5cm;"></div>
+    <h2>日本料理</h2>
+    <div style="padding:0.5cm;"></div>
+
+    <table id="food" cellpadding=10px>
+        <tr>
+            <th class="container"> 
+                <img src="../img/japan/food/1mutekiya.jpg" width=100%>
+                <div class="overlay">
+                    <div class="text">
+                        <h3>カニみそとんこつラーメン</h3>
+
+                        店：無敵家
+
+                    </div>
+                </div>
+            </th>
+            <th class="container">
+                <img src="../img/japan/food/2katsukura.jpg" width=100%>
+                <div class="overlay">
+                    <div class="text">
+                        <h3>とんかつ定食</h3>
+
+                        店：かつくら
+
+                    </div>
+                </div>           
+            </th>
+            <th class="container"> 
+                <img src="../img/japan/food/3kokkei.jpg" width=100% >
+                <div class="overlay">
+                    <div class="text">
+                        <h3>鷄スープラーメン</h3>
+     
+                        店：麺屋 極鶏 
+           
+                    </div>
+                </div>
+            </th>
+
+        </tr>
+        <tr>
+            <th class="container"> 
+                <img src="../img/japan/food/4orenoramen.jpg" width=100%>
+                <div class="overlay">
+                    <div class="text">
+                        <h3>こくまろ塩ラーメン</h3>
+
+                        店：俺のラーメン
+      
+                    </div>
+                </div>
+            </th>
+            <th class="container"> 
+                <img src="../img/japan/food/5waffle.jpg" width=100%>
+                <div class="overlay">
+                    <div class="text"> 
+                        <h3>いちごワッフルボンボン</h3>
+
+                        店：アースカフェ
+
+                    </div>
+                </div>
+            </th>
+            <th class="container"> 
+                <img src="../img/japan/food/6gram.jpg" width=100% >
+                <div class="overlay">
+                    <div class="text">
+                        <h3>プレミアムパンケーキ</h3>
+
+                        店：グラムカフェ
+  
+                    </div>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th class="container"> 
+                <img src="../img/japan/food/7fondue.jpg" width=100%>
+                <div class="overlay">
+                    <div class="text">
+                        <h3>抹茶フォンデュ</h3>
+
+                        店：京洋菓子司ジュヴァンセル
+                       
+                    </div>
+                </div>
+            </th>
+            <th class="container">
+                <img src="../img/japan/food/8ice.jpg" width=100%>
+                <div class="overlay">
+                    <div class="text">
+                        <h3>黒蜜きな粉のかき氷</h3>
+
+                        店：廚菓子くろぎ
+
+                    </div>
+                </div>
+            </th>
+            <th class="container"> 
+                <img src="../img/japan/food/9matcha.jpg" width=100% >
+                <div class="overlay">
+                    <div class="text">
+                        <h3>抹茶パフェ</h3>
+
+                        店：中村藤吉
+                       
+                    </div>
+                </div>
+            </th>
+        </tr>
+  
+      
+    </table>
+
+    <div style="padding:0.5cm;"></div>
+</div>
+
+
+<div style="padding-bottom:48px;">
+    <button style="display:none;" class="jplink" id="jpsightseeingLink2" onclick="openTab('jpsightseeing','jpsightseeingLink',0 )">日本旅行</button>
+    <button style="display:none;" class="jplink" id="jpfoodLink2" onclick="openTab('jpfood','jpfoodLink',0 )">日本料理</button>
+</div>
+
+<div id="pagetop" onclick="toppage();" onmouseenter="showHideUpArrow()" onmouseleave="showHideUpArrow()">
+    <div style="position:relative;">
+    <div id="uparrow" style="top:-20">
+        &#8593
+    </div>
+    </div>
+   トップへ
+</div>
+
+<div id="footer">
+    Copyright by Jira Jindalertudomdee
+</div>
+
+<div class="header" style="background-image: url('../img/menu_bg/japan.jpg');padding-top:90px;padding-bottom:10px;color:White;">
+    <div id="headerFG2"></div>
+    <img id="headerFG" src="../img/menu_bg/foreground.png" height=214px>
+    <h1 style="padding-left:180px;white-space:nowrap;">日本</h1>
+</div>
+
+<div class="scrollHeader">
+    <h2 style="padding-left:40px;">日本</h2>
+</div>
+
+<div id="hiddenmenuBackground" onclick="hideMenu(),showMenuButton()">
+</div>
+
+<div id="hiddenmenu">
+    <button class="hiddenmenuList" onclick="changePage('../index.html',0 )">
+        ホーム
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('profile.html',0 )">
+        プロフィール
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hobby.html',0 )">
+        趣味
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hometown.html',0 )">
+        出身
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('japan.html',0 )">
+        日本
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('research.html',0 )">
+        研究
+    </button>
+</div>
+
+<button id="homeButton" onclick="changePage('../index.html',0 )">ホーム</button>
+<button id="menuButton" onmouseenter="showMenu()">メニュー</button>
+<button id="closemenuButton" onclick="hideMenu()" onmouseout="showMenuButton()">閉じる</button>
+
+<div id="welcomeFG">
+</div>
+
+</body>
+</html>

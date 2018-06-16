@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+
+<html>
+<head>
+    <title>My Hometown</title>
+    <link rel="Stylesheet" type="text/css" href="../css/index.css">
+    <link rel="Stylesheet" type="text/css" href="../css/hometown.css">
+    <script type="text/javascript" src=../script/index.js></script>
+    <script type="text/javascript" src=../script/photo.js></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                showImages('.scrollHeader',145 );
+                fixSubheader('.subheader');
+                highlightSubheader(0);
+            });
+        });
+
+
+    </script>
+</head>
+<body onload="animateForeground(),showDivs(1),loadMenuButton(),slideIn(['#thaigeo','.subheader'],['#thaisightseeing','#thaifood','#pagetop','#footer']),highlightSubheader(1)">
+
+
+<div id="thaigeo" class="content2" style="padding-top:240px;display:none;" align=center>
+    <div style="padding:40px;"></div>
+    <h2>タイとは？</h2>
+    <div style="padding:0.5cm;"></div>
+    <img src="../img/hometown/thai-worldmap.gif" width=500px/><br />
+    <div style="padding:0.3cm;"></div>
+  　東南アジアにある形がアックスみたいな国である。<br /><br />
+    面積 &#8776; ５１３，０００ｋｍ<sup>2</sup> 人口 &#8776; ６，８００万人<br /><br />
+    首都：バンコク（東京から &#8776; ４，６００km）
+</div>
+
+<div style="display:none;" id="thaisightseeing" class="content2" align=center>
+   <h2>タイの観光所</h2>
+   <div style="padding:0.5cm;"></div>
+
+   <style>
+        
+   </style>
+   <table>
+    <tr>
+        <th style="width:8cm;align:center;padding-top:1.3cm;">
+         <img src="../img/hometown/sightseeing/thai-map.png" id="theImg" /> 
+
+         <img src="../img/hometown/sightseeing/icon/buddha.png"   width="10%" class="photonumber" id=position1 onclick="currentDiv(1)"> 
+         <img src="../img/hometown/sightseeing/icon/mountain.png" width="10%" class="photonumber" id=position2 onclick="currentDiv(2)"> 
+         <img src="../img/hometown/sightseeing/icon/buddha.png"   width="10%" class="photonumber" id=position3 onclick="currentDiv(3)">
+         <img src="../img/hometown/sightseeing/icon/buddha.png"   width="10%" class="photonumber" id=position4 onclick="currentDiv(4)">
+         <img src="../img/hometown/sightseeing/icon/sea.png"      width="10%" class="photonumber" id=position5 onclick="currentDiv(5)">
+
+        </th>
+        <th style="width:11.5cm;background-color:#777;align:center;">
+            <div id="sight_bg">
+            <div id="watrongkhun" class="mySlides">
+                <img src='../img/hometown/sightseeing/watrongkhun.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    ワット・ロンクン<br />
+                    所在地：チエンラーイ<br />
+                    </div>
+                    国外では「ホワイト・テンプル」の名でよく知られている。<br />
+                    工事は１９９６年から始まり、歴史の浅い寺院ですが、<br />
+                    観光バス周遊コースの定番のスポットになっている。
+                </div>
+                
+            </div>
+            <div id="doiinthanon" class="mySlides">
+                <img src='../img/hometown/sightseeing/doiinthanon.jpg'/>
+                 <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    ドーイ・インタノン<br />
+                    所在地：チエンマイ<br />
+                    </div>
+                    海抜2,565mで、タイの最高峰の山である。<br />
+                    ドーイ・インタノンの上に、多種の動物を観察することが出来、森林、滝など見所あふれる国立公園がある。
+                </div>               
+            </div>
+            <div id="watmahathat" class="mySlides">
+                <img src='../img/hometown/sightseeing/watmahathat.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    ワット・マハータート<br />
+                    所在地：アユタヤ<br />
+                    </div>
+                    中央にロッブリー様式の大きな仏塔がある仏教寺院である。<br />
+                    中央の回りを小さな仏塔が囲み、その回りを回廊が囲んでおり、
+                    礼拝堂と仏堂が東西にあったと推測されている。
+                </div>                 
+            </div>
+            <div id="watphrakaew" class="mySlides">
+                <img src='../img/hometown/sightseeing/watphrakaew.jpg'/>
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    ワット・プラケーオ<br />
+                    所在地：バンコク<br />
+                    </div>
+                    王宮の敷地内にある仏教寺院である。
+                    本堂にはエメラルド仏が安置されている。
+                    王室専用の仏教儀式の場であるため僧侶がいない。
+                    普段の観光地になっている。
+                </div>                   
+            </div>
+            <div id="phuket" class="mySlides">
+                <img src='../img/hometown/sightseeing/phuket.jpg' />
+                <div class="sight_desc">
+                    <div class="sight_desc_header">
+                    パトンビーチ<br />
+                    所在地：プーケット<br />
+                    </div>
+                    長さ約3キロプーケットの最大のビーチである。<br />
+                    ビーチで楽しめるのは、ジェットスキーやパラセイリング、<br />
+                    ウインドサーフィンなど色々なアクティビティである。
+                </div>                   
+            </div>
+            </div>
+
+            <div align=center>
+                <table style="padding-top:11cm;">
+                <tr>
+                   <th><button class="photocontroller" onclick="plusDivs(-1)">❮ 前へ</button> </th>
+                   <th><button class="photocontroller" onclick="plusDivs(1)">次へ ❯</button> </th>
+                </tr>
+                </table>
+            </div>
+        </th>
+    </tr>
+   </table> 
+</div>
+
+<div style="display:none;" id="thaifood" class="content2" align=center>
+    <h2>タイ料理</h2>
+    <div style="padding:0.5cm;"></div>
+
+    <table id="food">
+        <tr>
+            <th> <img class="foodpic" src="../img/hometown/food/greencurry.jpg" id="greencurry_pic" width=100% onmouseenter="show_food_desc('#greencurry')" onmouseleave="hide_food_desc('#greencurry')"></th>
+            <th>
+                <div id="greencurry_name">
+                <h2>グリーンカレー</h2>
+                </div>
+                <div class="food_desc" id="greencurry_desc">
+                <h3>グリーンカレー</h3>
+                香辛料やハーブをすり潰したペーストを炒めて <br />
+                ココナッツミルクやナンプラー、砂糖、<br />
+                具になる野菜（豆ナス、ナス、赤ピーマンなど）、<br />
+                肉、エビや魚を加えて煮込んで作る。<br />
+
+                <p>
+                香辛料を未熟の青いときに収穫して加えるなど緑色のハーブ類を用いているため緑色となる。
+                </p>
+                </div> 
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div id="kapao_name">
+                <h2>ガパオライス</h2>
+                </div>
+                <div class="food_desc" id="kapao_desc">
+                <h3>ガパオライス</h3>
+                肉類とカミメボウキ（バジルみたいなハーブ）を<br />
+                ナンプラー・オイスターソースと炒め料理である。
+                主に豚の挽肉が用いられるが、肉の代わりに<br />
+                魚介類やキノコなどが用いられることもある。
+
+                <p>
+                熱いタイ米をかけて、目玉焼きと一緒に食べるのはおすすめである。
+                </p>
+                </div>
+            </th>
+            <th> <img class="foodpic" src="../img/hometown/food/kapao.jpg" width=100% id="kapao_pic" onmouseenter="show_food_desc('#kapao')" onmouseleave="hide_food_desc('#kapao')"></th>
+        </tr>
+        <tr>
+            <th> <img class="foodpic" src="../img/hometown/food/tomyum.jpg" width=100% id ="tomyum_pic" onmouseenter="show_food_desc('#tomyum')" onmouseleave="hide_food_desc('#tomyum')"></th>
+            <th>
+                <div id="tomyum_name">
+                <h2>トムヤムクン</h2>
+                </div>
+                <div class="food_desc" id="tomyum_desc">
+                <h3>トムヤムクン</h3>
+                【唐辛子・タイのチリ イン オイル】の辛味と<br />
+                【ライム】の酸味、【レモングラス・ガランガル・<br />
+                カフェライムリーフ】３つのハーブの複雑な香りが特徴的なスープである。
+
+                <p>
+                トムヤムクンの【クン】という意味はエビですが、
+                実際はエビにかわって、他の肉や魚介類を入っても大丈夫である。
+                </p>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div id="padthai_name">
+                <h2>パッドタイ</h2>
+                </div>
+                <div class="food_desc" id="padthai_desc">
+                <h3>パッドタイ</h3>
+                センレクという麺類のタイ風の焼きそばである。
+
+                <p>
+                タイ料理はなんでも辛い料理というイメージが<br />ありますが、
+                パッドタイのように辛くない<br />
+                タイ料理も存在する。
+                </p>
+                </div>
+            </th>
+            <th> <img class="foodpic" src="../img/hometown/food/padthai.jpg" width=100% id="padthai_pic" onmouseenter="show_food_desc('#padthai')" onmouseleave="hide_food_desc('#padthai')"></th>
+        </tr>
+        <tr>
+            <th> <img class="foodpic" src="../img/hometown/food/mango_sticky_rice.jpg" width=100% id="mango_pic" onmouseenter="show_food_desc('#mango')" onmouseleave="hide_food_desc('#mango')"></th>
+            <th>
+                <div id="mango_name">
+                <h2>カオニャオ・マムアン</h2>
+                </div>
+                <div class="food_desc" id="mango_desc">    
+                <h3>カオニャオ・マムアン</h3>
+                炊いた餅米とココナッツミルクを混ぜて、<br />
+                マンゴーを載せたタイの夏の定番お菓子である。<br />
+                タイで夏はマンゴーの季節のである。
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div id="durian_name">
+                <h2>ドリアン</h2>
+                </div>
+                <div class="food_desc" id="durian_desc">
+                <h3>ドリアン</h3>
+                東南アジアの原産地の強い匂い果物である。<br />
+                果実は強い甘味を持ち、栄養豊富<br />
+                （特にビタミンB1を多く含有）な果物ある。
+                
+                <p>
+                タイでは【果物の王様】と呼ばれている。
+                </p>
+                </div>
+            </th>
+            <th> <img class="foodpic" src="../img/hometown/food/durian.jpg" width=100% id="durian_pic" onmouseenter="show_food_desc('#durian')" onmouseleave="hide_food_desc('#durian')"></th>
+        </tr>
+    </table>
+</div>
+
+
+<div id="pagetop"  onclick="toppage();" onmouseenter="showHideUpArrow()" onmouseleave="showHideUpArrow()">
+    <div style="position:relative;">
+    <div id="uparrow" style="top:-20">
+        &#8593
+    </div>
+    </div>
+   トップへ
+</div>
+
+<div id="footer">
+    Copyright by Jira Jindalertudomdee
+</div>
+
+<div class="header" style="background-image: url('../img/menu_bg/thailand.jpg');padding-top:20px;padding-bottom:80px;color:White;">
+    <div id="headerFG2"></div>
+    <img id="headerFG" src="../img/menu_bg/foreground.png" height=214px>
+    <h1 style="padding-left:90px;">出身</h1>
+</div>
+
+<div class="scrollHeader">
+    <h2 style="padding-left:40px;">出身</h2>
+</div>
+
+<div class="subheader" style="width:100%;left:0;height:18px;background-color:#EEE;display:none;">
+<button class="thaiLink" id="thaigeo_header" onclick="scrollto('#thaigeo');" >
+    地理を知りたい
+</button>
+<button class="thaiLink" id="thaisightseeing_header" onclick="scrollto('#thaisightseeing');">
+    観光所を知りたい
+</button>
+<button class="thaiLink" id="thaifood_header" onclick="scrollto('#thaifood');">
+    料理を知りたい
+</button>
+</div>
+
+<div id="hiddenmenuBackground" onclick="hideMenu(),showMenuButton()">
+</div>
+
+<div id="hiddenmenu">
+    <button class="hiddenmenuList" onclick="changePage('../index.html',0 )">
+        ホーム
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('profile.html',0 )">
+        プロフィール
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hobby.html',0 )">
+        趣味
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hometown.html',0 )">
+        出身
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('japan.html',0 )">
+        日本
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('research.html',0 )">
+        研究
+    </button>
+</div>
+
+<button id="homeButton" onclick="changePage('../index.html',0 )">ホーム</button>
+<button id="menuButton" onmouseenter="showMenu()">メニュー</button>
+<button id="closemenuButton" onclick="hideMenu()" onmouseout="showMenuButton()">閉じる</button>
+
+<div id="welcomeFG">
+</div>
+
+</body>
+</html>

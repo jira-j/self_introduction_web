@@ -1,0 +1,113 @@
+﻿.mySlides
+{ display:none; 
+  position:absolute; 
+  left:0px;
+  right:0px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.sight_desc
+{
+    padding-top:0.6cm;
+    line-height:150%;
+    text-align:left;
+    padding-left:0.3cm;
+    padding-right:0.3cm;
+    color:White;
+}
+.sight_desc_header
+{
+    padding-left:0.4cm;
+    padding-bottom:0.4cm;
+    color:White;
+}
+
+.photonumber
+{
+    background-color:none; 
+    cursor:pointer;
+}
+#position1 {position:relative; top:-380px; left:-170px; border-style:solid;}
+#position2 {position:relative; top:-370px; left:-30px; border-style:solid;}
+#position3 {position:relative; top:-270px; left:-20px; border-style:solid;}
+#position4 {position:relative; top:-235px; left:-45px; border-style:solid;}
+#position5 {position:relative; top:-90px; left:-150px; border-style:solid;}
+
+#position1:hover,#position2:hover,#position3:hover,#position4:hover,#position5:hover
+{
+    border-color:#4CC;
+}
+.photocontroller
+{
+    background-color: #DDD; 
+    border: none;
+    color: Black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition:.1s;
+    margin-left:20px;
+    margin-right:20px;
+    cursor:pointer;
+}
+.photocontroller:hover
+{
+    background-color: #555;
+    color:White;
+}
+
+.subheader
+{
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;   
+    font-size:large;
+    background-color:#AAA;
+    position:absolute;
+    top:215;
+    white-space:nowrap;
+}
+
+
+.thaiLink
+{
+    background-color: #AAA;
+    color: White;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 14px;
+    margin-top:-12px;
+    font-size: 17px;
+    width:33.333333333%;
+}
+.thaiLink:hover
+{
+    background-color:#5AA;
+    color:White;
+}   
+
+table#food th {
+    width:8.5cm;
+    text-align:center;
+}
+
+    
+.food_desc
+{
+    line-height:150%;
+    display:none;
+}
+
+#sight_bg
+{
+     position:relative;
+}
+
+.foodpic
+{
+    cursor:pointer;
+    }

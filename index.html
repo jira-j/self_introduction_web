@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+
+<html>
+<head>
+    <title>Welcome to My Homepage</title>
+    <link rel="Stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="script/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                showImages('.scrollHeader', 200);
+            });            
+        });
+
+        
+    </script>
+</head>
+<body style="background-image:url('img/sky.jpg');" onload="welcome_message()">
+
+<div style="padding-top:500px;"></div>
+
+
+<div id="welcomeFG2">
+</div>
+
+<button class="menu" style="background-color:White;width:100%;" onmouseleave="highlight('#profileFG')" onmouseenter="fading('#profileFG')" onclick="changePage('htmls/profile.html',1)">
+   
+   <table>
+        <tr>
+        <th style="padding-top:70px;padding-bottom:70px;white-space:nowrap;"> 
+            <h1>プロフィール</h1> 
+        </th>
+        <th style="text-align:right;" width=99%> <img src="img/menu_bg/profile.jpg"> </th>
+        </tr>
+   </table>
+   <div class="menuFG" id="profileFG" style="top:500;height:226px;"></div>
+</button>
+<div class="menu" style="background-image: url('img/menu_bg/hobby.jpg');padding-top:120px;height:94px;" onmouseleave="highlight('#hobbyFG')" onmouseenter="fading('#hobbyFG')" onclick="changePage('htmls/hobby.html',1)">
+    <h1>趣味</h1>
+    <div class="menuFG" id="hobbyFG" style="top:728;height:214px;"></div>
+</div>
+<div class="menu" style="background-image: url('img/menu_bg/thailand.jpg');padding-top:40px;height:174px;color:White;" onmouseleave="highlight('#thailandFG')" onmouseenter="fading('#thailandFG')" onclick="changePage('htmls/hometown.html',1)">
+    <h1>出身</h1>
+    <div class="menuFG" id="thailandFG" style="top:942;height:214px;"></div>
+</div>
+<div class="menu" style="background-image: url('img/menu_bg/japan.jpg');padding-top:130px;color:White;height:84px;" onmouseleave="highlight('#japanFG')" onmouseenter="fading('#japanFG')" onclick="changePage('htmls/japan.html',1)">
+    <div class="menuFG" id="japanFG" style="top:1156;height:214px;"></div>
+    <h1>日本</h1>
+</div>
+<div class="menu" style="background-image: url('img/menu_bg/research.jpg');padding-top:40px;height:174px;" onmouseleave="highlight('#researchFG')" onmouseenter="fading('#researchFG')" onclick="changePage('htmls/research.html',1)">
+    <div class="menuFG" id="researchFG" style="top:1370;height:214px;"></div>
+    <h1>研究</h1> 
+</div>
+
+
+
+<div id="pagetop" onclick="toppage();" onmouseenter="showHideUpArrow()" onmouseleave="showHideUpArrow()">
+    <div style="position:relative;">
+    <div id="uparrow" style="top:-20">
+        &#8593
+    </div>
+    </div>
+   トップへ
+</div>
+
+
+<div id="footer">
+    Copyright by Jira Jindalertudomdee
+</div>
+
+
+<div id="welcomeFG3">
+</div>
+
+<div id="welcomeFG">
+</div>
+
+
+<div class="welcome">
+<h1 id="welcome1">
+     ジラのホームページへ ようこそ
+</h1>
+<h2 id="welcome2">
+    お楽しみください
+</h2>
+</div>
+
+<div class="scrollHeader">
+    <h2 style="padding-left:40px;">ジラのホームページ</h2>
+</div>
+
+
+<div id="hiddenmenuBackground" onclick="hideMenu(),showMenuButton()">
+</div>
+
+<div id="hiddenmenu"　onclick="toppage()">
+    <button class="hiddenmenuList" onclick="changePage('index.html',1)">
+        ホーム
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('htmls/profile.html',1)">
+        プロフィール
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('htmls/hobby.html',1)">
+        趣味
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('htmls/hometown.html',1)">
+        出身
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('htmls/japan.html',1)">
+        日本
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('htmls/research.html',1)">
+        研究
+    </button>
+
+</div>
+
+<button id="homeButton" onclick="changePage('index.html',1)">ホーム</button>
+<button id="menuButton" onmouseenter="showMenu()">メニュー</button>
+<button id="closemenuButton" onclick="hideMenu()" onmouseout="showMenuButton()">閉じる</button>
+
+
+</body>
+</html>

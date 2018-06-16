@@ -1,0 +1,155 @@
+﻿.jplink 
+{
+    background-color: #AAA;
+    color: Black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 17px 17px;
+    margin-top:-5px;
+    font-size: 17px;
+    width: 50%;
+    cursor:pointer;
+    display:none;
+}
+.jplink:hover
+{
+    background-color:#777;
+    color:White;
+}
+
+.jpcontent
+{
+    display:none;
+    text-align:center;
+    border-style:none;
+}
+
+.mySlides
+{ display:none; 
+  position:absolute; 
+  top:20px; 
+  left:0px;
+  right:0px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.sight_desc
+{
+    padding-top:0.6cm;
+    line-height:150%;
+    text-align:left;
+    padding-left:0.3cm;
+    padding-right:0.3cm;
+    color:White;
+}
+.sight_desc_header
+{
+    padding-left:0.4cm;
+    padding-bottom:0.4cm;
+    color:White;
+}
+
+.photonumber
+{
+    cursor:pointer;
+}
+
+#icon1 {position:relative; top:-260px; left:170px; }
+#icon2 {position:relative; top:-120px; left:165px; }
+#icon3 {position:relative; top:-110px; left:140px; }
+#icon4 {position:relative; top:-120px; left:120px; }
+#icon5 {position:relative; top:-110px; left:75px; }
+#icon6 {position:relative; top:-95px; left:40px; }
+#icon7 {position:relative; top:-75px; left:30px; }
+#icon8 {position:relative; top:-75px; left:-5px; }
+#icon9 {position:relative; top:-90px; left:-25px; }
+#icon10 {position:relative; top:-100px; left:-55px; }
+#icon11 {position:relative; top:-80px; left:-95px; }
+#icon12 {position:relative; top:-70px; left:-145px; }
+#icon13 {position:relative; top:-70px; left:-180px; }
+#icon14 {position:relative; top:-50px; left:-200px; }
+#icon15 {position:relative; top:-40px; left:-200px; }
+.photocontroller
+{
+    background-color: #DDD; 
+    border: none;
+    color: Black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition:.1s;
+    margin-left:20px;
+    margin-right:20px;
+    cursor:pointer;
+}
+.photocontroller:hover
+{
+    background-color: #555;
+    color:White;
+}
+
+.subheader
+{
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;   
+    font-size:large;
+    background-color:#AAA;
+    position:fixed;
+    top:215;
+}
+
+#sight_bg
+{
+    position:relative;
+}
+
+table#food th {
+    width:10cm;
+    text-align:center;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 92%;
+  left: 10;
+  right: 10;
+  top:10;
+  background-color: #7CC;
+  overflow: hidden;
+
+  height:0;
+  opacity:0.95;
+  transition: .5s;
+}
+
+.container:hover .overlay{
+  bottom: -10;
+  height: 92%;
+}
+
+.text 
+{
+  white-space:nowrap;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family:ＭＳ ゴシック;
+}

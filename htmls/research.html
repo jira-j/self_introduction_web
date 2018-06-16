@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+
+<html>
+<head>
+    <title>My Past Research</title>
+    <link rel="Stylesheet" type="text/css" href="../css/index.css">
+    <script type="text/javascript" src=../script/index.js></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                showImages('.scrollHeader',145 );
+            });
+        });
+
+    </script>
+</head>
+<body onload="animateForeground(),loadMenuButton(),slideIn(['.content'],['#pagetop','#footer'])">
+
+<div style="display:none;" class="content" style="background-color:White;"  align=center>
+    <div style="padding:0.5cm;"></div>
+    <h2>化学構造列挙アルゴリズム</h2>
+    <div style="padding:0.5cm;"></div>
+    <div class="detail_content">
+    化学構造の列挙は、ある条件を満たす全ての化学構造を重複なく見つけるという<br />【ケモインフォマティクス】の基本的な問題である。
+    質量分析器から得られるスペクトルからの化学構造の決定や薬品の発見など様々な問題に応用できる。<br />
+    本研究では【化学式】、つまり各原子の数を条件として利用します。<br />
+
+    <img src="../img/research/enumeration_problem.png" style="padding-top:0.3cm;padding-bottom:0.3cm;" width=80% /> <br />
+
+    また、化学構造は、ノードとエッジがそれぞれ原子と結合を表す木構造によって<br />表現する。
+    木構造で表現するために、環状構造を特別な一つのノードとして扱う<br />ことで化学構造を列挙する。
+    このとき環状構造中のどの原子と結合していたかの<br />情報(【原子の位置】と呼ぶ)を保存しておく必要がある。<br />
+    下の例でベンゼン環は【a】というラベルのノードを表示する。
+
+
+    <img src="../img/research/chemicalTree1.png" style="padding-top:0.3cm;padding-bottom:0.3cm;" width=40% /> 
+    <img src="../img/research/chemicalTree2.png" style="padding-top:0.3cm;padding-bottom:0.8cm;" width=40% /> <br />
+
+    列挙するために、まず初めに、不飽和度と原子の数によって環状構造の数を計算<br />する。
+    その後、木構造の列挙アルゴリズムを改良して、環状構造を表すノードを<br />持つ木構造を重複なく列挙するアルゴリズムを開発した。
+    最後に、重複がないように原子の位置を割当てる手法を提案した。
+    列挙した木構造を幅優先探索の逆の順番で辿り、それぞれの見つけた環状構造を表すノードに提案する手法によって原子の位置を割当てる。
+    </div>
+
+</div>
+
+
+<div id="pagetop" onclick="toppage();" onmouseenter="showHideUpArrow()" onmouseleave="showHideUpArrow()">
+    <div style="position:relative;">
+    <div id="uparrow" style="top:-20;">
+        &#8593
+    </div>
+    </div>
+   トップへ
+</div>
+
+<div id="footer">
+    Copyright by Jira Jindalertudomdee
+</div>
+
+
+<div class="header" style="background-image: url('../img/menu_bg/research.jpg');">
+    <div id="headerFG2"></div>
+    <img id="headerFG" src="../img/menu_bg/foreground.png" height=214px>
+ 
+    <h1 style="padding-top:25px;padding-bottom:75px;padding-left:90px;">研究</h1>
+</div>
+
+<div class="scrollHeader">
+    <h2 style="padding-left:40px;">研究</h2>
+</div>
+
+<div id="hiddenmenuBackground" onclick="hideMenu(),showMenuButton()">
+</div>
+
+<div id="hiddenmenu">
+    <button class="hiddenmenuList" onclick="changePage('../index.html',0 )">
+        ホーム
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('profile.html',0 )">
+        プロフィール
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hobby.html',0 )">
+        趣味
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hometown.html',0 )">
+        出身
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('japan.html',0 )">
+        日本
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('research.html',0 )">
+        研究
+    </button>
+</div>
+
+<button id="homeButton" onclick="changePage('../index.html',0 )">ホーム</button>
+<button id="menuButton" onmouseenter="showMenu()">メニュー</button>
+<button id="closemenuButton" onclick="hideMenu()" onmouseout="showMenuButton()">閉じる</button>
+
+<div id="welcomeFG">
+</div>
+
+</body>
+</html>

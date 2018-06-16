@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+
+<html>
+<head>
+    <title>My Profile</title>
+    <link rel="Stylesheet" type="text/css" href="../css/index.css">
+    <script type="text/javascript" src=../script/index.js></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                showImages('.scrollHeader',145 );
+            });
+        });
+
+    </script>
+</head>
+<body onload="animateForeground(),loadMenuButton(),slideIn(['.content'],['#pagetop','#footer'])">
+
+
+
+
+<div class="content" style="width:17cm;display:none;" align=center>
+    <div style="padding:0.5cm">
+    </div>
+    <div align="left">
+        <h2>自己紹介</h2>
+    </div>
+    <div style="padding:0.5cm"></div>
+        <img src="../img/profile.jpg" width=30% />
+    <div style="padding:0.5cm;"></div>
+    <table id="profile">
+        <tr>
+            <th> 名前　</th>
+            <th> Jindalertudomdee Jira</th>
+        </tr>
+        <tr>
+            <th> フリガナ</th>
+            <th> ジンダラートウドムディー　ジラ</th>
+        </tr>
+        <tr>
+            <th> 誕生日</th>
+            <th> 12月5日</th>
+        </tr>
+        <tr>
+            <th>　出身</th>
+            <th> タイ</th>
+        </tr>
+        <tr>
+            <th> 専攻</th>
+            <th> 情報学研究科</th>
+        </tr>
+        <tr>
+            <th> 好きな食べ物</th>
+            <th> とんこつラーメン、生クリーム入るデザート、抹茶</th>
+        </tr>
+        <tr>
+            <th> 好きなアーティスト</th>
+            <th> Mr.Children、Sam Smith、Maroon5</th>
+        </tr>
+    </table>
+</div>
+
+
+<div id="pagetop" onclick="toppage();" onmouseenter="showHideUpArrow()" onmouseleave="showHideUpArrow()">
+    <div style="position:relative;">
+    <div id="uparrow" style="top:-20">
+        &#8593
+    </div>
+    </div>
+    トップへ
+</div>
+
+<div id="footer">
+    Copyright by Jira Jindalertudomdee
+</div>
+
+
+
+<div class="header">
+   <div id="headerFG2"></div>
+   <img id="headerFG" src="../img/menu_bg/foreground.png" height=214px>
+   <table >
+        <tr>
+        <th style="padding-top:50px;padding-bottom:50px;padding-left:50px;white-space:nowrap;"> <h1>プロフィール</h1> </th>
+        <th style="text-align:right;" width=90%> <img src="../img/menu_bg/profile.jpg" height=208px> </th>
+        </tr>
+   </table>
+</div>
+
+<div class="scrollHeader">
+    <h2 style="padding-left:40px;">プロフィール</h2>
+</div>
+
+<div id="hiddenmenuBackground" onclick="hideMenu(),showMenuButton()">
+</div>
+
+<div id="hiddenmenu">
+    <button class="hiddenmenuList" onclick="changePage('../index.html',0 )">
+        ホーム
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('profile.html',0 )">
+        プロフィール
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hobby.html',0 )">
+        趣味
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('hometown.html',0 )">
+        出身
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('japan.html',0 )">
+        日本
+    </button>
+    <button class="hiddenmenuList" onclick="changePage('research.html',0 )">
+        研究
+    </button>
+</div>
+
+<button id="homeButton" onclick="changePage('../index.html',0 )">ホーム</button>
+<button id="menuButton" onmouseenter="showMenu()">メニュー</button>
+<button id="closemenuButton" onclick="hideMenu()" onmouseout="showMenuButton()">閉じる</button>
+
+<div id="welcomeFG">
+</div>
+
+</body>
+</html>
